@@ -1,0 +1,134 @@
+* {
+	margin: 0%;
+	padding: 0%;
+}
+
+body {
+	background-color:#000;
+	background-image: url(../_img/background.jpg);
+	background-size: 99%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+
+#introduction {
+	margin-top:17%;
+	padding:1%;
+	width: 98%;
+}
+
+#contacts {
+	border-radius: 15px;
+	margin-top:11%;
+	margin-left:20%;
+	width: 60%;
+	padding-top:1%;
+	padding-bottom:1%;
+}
+
+#contacts, #introduction{
+	background-color: #FF0000;
+	background-color: rgba(255,255,255,.1);
+}
+
+#introduction h1, #introduction h3 {
+	text-align: center;
+	color: #eee;
+}
+
+#introduction h1 {
+	font-family: Lobster;
+	font-size: 600%;
+	font-weight: normal;
+}
+
+#introduction h3 {
+	font-family: Play;
+}
+
+h1 {
+	font-size: 450%;
+	-webkit-transition-duration: 3.10s;
+}
+
+h1:hover {
+	-webkit-transition-duration: 1.90s;
+	-webkit-filter: drop-shadow(3px 3px 30px #1CAD55);
+}
+
+h3 {
+	font-weight: lighter;
+	font-size: 180%;
+}
+
+.container{
+	position: relative;
+}
+
+.logo {
+	width:8%;
+	margin-left:2%;
+	margin-right:2%;
+        vertical-align: middle;
+	-webkit-transition-duration: .90s;
+}
+
+.logo:hover {
+	-webkit-transition-duration: .90s;
+	-webkit-filter: grayscale(100%);
+}
+
+@media all and (min-width: 602px) and (max-width: 800px) {
+	#contacts {
+		width:100%;
+		margin:0%;
+		padding:0%;
+	}
+
+	.logo {
+		margin:0%;
+		padding:0%;
+		display:block;
+		width: 400%;
+	}
+}
+
+@media all and (max-width: 601px) {
+	#contacts {
+		width:400%;
+		margin:0%;
+		padding:0%;
+	}
+
+	.logo {
+		display:block;
+		margin-bottom: 5%;
+	}
+}
+
+@media all and (max-width: 480px) {
+	#introduction h1 {
+		font-size: 300%;
+	}
+
+	#introduction h3 {
+		font-size: 60%;
+	}
+
+	#contacts {
+		width:100%;
+		text-align: center;
+	}
+
+	#facebook, #gmail, #github, #linkedin, #lattes, #cv {
+		width:50%;
+		display:block;
+		margin-left: 25%;
+	}
+
+	#facebook, #linkedin {
+		width:60%;
+		margin-left:20%;
+	}
+}
