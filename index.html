@@ -1,35 +1,633 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="pt-br"><!--<![endif]-->
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Alzarus</title>
-        <link rel="shortcut icon" type="image/x-icon" href="resources/images/favicon.svg"/>
-        <link href="https://fonts.googleapis.com/css?family=Play|Lobster" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="resources/css/background-slider.css" />
-        <link rel="stylesheet" type="text/css" href="resources/css/main-style.css" />
-    </head>
-    <body id="page">
-        <ul class="cb-slideshow">
-            <li><span>01</span></li><!--slide de apresentacao -->
-        </ul>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Pedro Almeida (Alzarus) | Engenheiro de Software & QA Sênior</title>
+    <meta name="description" content="Portfólio profissional de Pedro Batista de Almeida Filho (Alzarus). Engenheiro de Software e QA Sênior com 9 anos de experiência em testes automatizados, GenAI, MCP e microsserviços." />
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Pedro Almeida (Alzarus) - Engenheiro de Software & QA Sênior" />
+    <meta property="og:description" content="Engenheiro de Software com 9 anos de experiência em automação de testes Web/Mobile, GenAI, Model Context Protocol (MCP) e arquitetura de sistemas." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alzarus.github.io" />
 
-        <div class="container">
-                <div id="introduction">
-                    <h1>Alzarus</h1>
-                        <h3>Systems analyst</h3> <!--breve descricao -->
-                </div>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/svg+xml" href="resources/images/favicon.svg" />
 
-                <div id="contacts">
-                        <!-- <a href="https://www.facebook.com/peuualmeidaa" target="_blank"><img src="resources/images/facebook-logo.svg" id="facebook" class="logo" title="Facebook"></a> -->
-                        <a href="mailto:alzarus.25@hotmail.com" target="_blank"><img src="resources/images/email-logo.svg" id="email" class="logo" title="E-mail (pedro.almei@hotmail.com)"></a>
-                        <a href="https://github.com/alzarus" target="_blank"><img src="resources/images/github-logo.svg" id="github" class="logo" title="Github"></a>
-                        <a href="https://www.linkedin.com/in/pedroalmei/" target="_blank"><img src="resources/images/linkedin-logo.svg" id="linkedin" class="logo" title="LinkedIn"></a>
-                </div>
+    <!-- Custom CSS Stylesheet -->
+    <link rel="stylesheet" href="resources/css/style.css" />
+</head>
+<body>
+
+    <!-- Header Navigation with Glassmorphism -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#hero" class="brand-logo" aria-label="Alzarus Home">
+                <div class="brand-icon">A</div>
+                <span>Alzarus</span>
+            </a>
+
+            <nav aria-label="Navegação Principal">
+                <ul class="nav-links">
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#experiencia" class="nav-link">Experiência</a></li>
+                    <li><a href="#competencias" class="nav-link">Competências</a></li>
+                    <li><a href="#formacao" class="nav-link">Formação</a></li>
+                    <li><a href="#publicacoes" class="nav-link">Publicações</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                    <!-- Sun Icon (shown in dark mode) -->
+                    <svg id="sun-icon" class="theme-icon" viewBox="0 0 24 24" style="display: none;">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <!-- Moon Icon (shown in light mode) -->
+                    <svg id="moon-icon" class="theme-icon" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
-    </body>
+    </header>
+
+    <main>
+        <!-- Hero Section using Bento Box Layout -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="bento-grid">
+                    
+                    <!-- Bento Card 1: Main Introduction (Span 8) -->
+                    <div class="bento-card col-span-8 hero-main-card reveal-on-scroll">
+                        <div>
+                            <div class="hero-tag">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                                Engenheiro de QA Sênior & Desenvolvedor Full Stack
+                            </div>
+                            <h1 class="hero-title">
+                                Acelerando a engenharia de software com <span class="highlight">qualidade, GenAI e automação</span>.
+                            </h1>
+                            <p class="hero-description">
+                                Sou Pedro Almeida, Engenheiro de Software e Qualidade com 9 anos de experiência em automação de testes Web/Mobile, Model Context Protocol (MCP), arquitetura de sistemas e integração contínua. Atualmente lidero iniciativas de QA na Questrade Financial Group.
+                            </p>
+                        </div>
+                        <div class="hero-actions">
+                            <a href="#experiencia" class="btn btn-primary">
+                                Ver Trajetória Profissional
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                            <a href="#contato" class="btn btn-secondary">
+                                Entrar em Contato
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Bento Card 2: Profile Highlight Card (Span 4) -->
+                    <div class="bento-card col-span-4 profile-card reveal-on-scroll">
+                        <div class="profile-avatar">
+                            <img src="resources/images/profile.jpg" alt="Foto de perfil de Pedro Batista de Almeida Filho" />
+                        </div>
+                        <h2 class="profile-name">Pedro Almeida</h2>
+                        <p class="profile-role">Sr. QA Engineer & AI Developer<br><span style="font-size:0.8rem; opacity:0.8;">Salvador, Bahia, Brasil</span></p>
+                        
+                        <div class="social-links">
+                            <a href="https://www.github.com/alzarus" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Perfil do GitHub">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/pedroalmei" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Perfil do LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                            <a href="mailto:pedro.almei@hotmail.com" class="social-icon-btn" aria-label="Enviar E-mail">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Bento Card 3: Metrics / Key Achievements (Span 4) -->
+                    <div class="bento-card col-span-4 stat-card reveal-on-scroll">
+                        <div class="stat-number">9+ Anos</div>
+                        <div class="stat-label">Experiência em Engenharia e Qualidade de Software</div>
+                    </div>
+
+                    <!-- Bento Card 4: Metrics (Span 4) -->
+                    <div class="bento-card col-span-4 stat-card reveal-on-scroll">
+                        <div class="stat-number">GenAI & MCP</div>
+                        <div class="stat-label">Engenharia de Contexto & Aceleração com IA</div>
+                    </div>
+
+                    <!-- Bento Card 5: Metrics (Span 4) -->
+                    <div class="bento-card col-span-4 stat-card reveal-on-scroll">
+                        <div class="stat-number">Cross-Platform</div>
+                        <div class="stat-label">Automação Web/Mobile (Detox, Playwright, Cypress)</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="sobre" class="section">
+            <div class="container">
+                <div class="section-header reveal-on-scroll">
+                    <span class="section-badge">Visão Geral</span>
+                    <h2 class="section-title">Resumo Profissional</h2>
+                    <p class="section-subtitle">Sólida atuação no ciclo de vida de desenvolvimento, desde a concepção de microsserviços até a automação contínua e inovação com Inteligência Artificial Generativa.</p>
+                </div>
+
+                <div class="bento-grid">
+                    <div class="bento-card col-span-6 reveal-on-scroll">
+                        <div class="card-header-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Arquitetura de QA & Automação Mobile/Web</h3>
+                        <p class="card-text">
+                            Implementação de frameworks end-to-end (Detox, Playwright, Cypress, Jest, Puppeteer, Selenium) integrados a pipelines de CI/CD em Docker, garantindo alta cobertura e validação automatizada de acessibilidade (a11y).
+                        </p>
+                    </div>
+
+                    <div class="bento-card col-span-6 reveal-on-scroll">
+                        <div class="card-header-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">GenAI & Engenharia de Contexto (MCP)</h3>
+                        <p class="card-text">
+                            Uso avançado de IA Generativa (Claude, Cursor, Copilot) e Model Context Protocol (MCP) para otimização de casos de teste, geração automática de documentação e aceleração do fluxo de entrega.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experiencia" class="section">
+            <div class="container">
+                <div class="section-header reveal-on-scroll">
+                    <span class="section-badge">Carreira</span>
+                    <h2 class="section-title">Experiência Profissional</h2>
+                    <p class="section-subtitle">Trajetória em grandes empresas de tecnologia e serviços financeiros.</p>
+                </div>
+
+                <div class="timeline reveal-on-scroll">
+                    
+                    <!-- Questrade -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header-meta">
+                                <span class="timeline-company">Questrade Financial Group</span>
+                                <span class="timeline-date">MAR 2025 — PRESENTE</span>
+                            </div>
+                            <div class="timeline-role">Engenheiro de QA Sênior (Allspark Web & Mobile Design System)</div>
+                            <p class="timeline-text">
+                                Liderança da estratégia de automação de testes e sustentação de componentes no Design System. Implementação da arquitetura Detox para testes móveis React Native e manutenção da suíte Playwright/Cypress com validação de acessibilidade.
+                            </p>
+                            <ul class="highlight-bullets">
+                                <li class="highlight-bullet-item">Arquitetura de automação mobile com Detox para aplicações React Native.</li>
+                                <li class="highlight-bullet-item">Transição para testes de componentes em Cypress com validação de acessibilidade (a11y).</li>
+                                <li class="highlight-bullet-item">Uso de GenAI (Claude, Cursor, Copilot e MCP) para otimização de testes e suporte operacional.</li>
+                                <li class="highlight-bullet-item">Orquestração de pipelines em GitLab CI e ambientes Dockerizados.</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Detox</span>
+                                <span class="tech-tag">Playwright</span>
+                                <span class="tech-tag">Cypress</span>
+                                <span class="tech-tag">GitLab CI</span>
+                                <span class="tech-tag">MCP</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dexian Brasil -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header-meta">
+                                <span class="timeline-company">Dexian Brasil</span>
+                                <span class="timeline-date">MAR 2023 — DEZ 2024</span>
+                            </div>
+                            <div class="timeline-role">Analista de QA Sênior (Pizza Hut / Yum! Brands)</div>
+                            <p class="timeline-text">
+                                Atuação na biblioteca comum de padronização de fluxos de dados entre clientes e microsserviços de backend da Pizza Hut/Yum!.
+                            </p>
+                            <ul class="highlight-bullets">
+                                <li class="highlight-bullet-item">Desenvolvimento de testes automatizados em Jest e asserções em Redux store e React hooks.</li>
+                                <li class="highlight-bullet-item">Desenvolvimento de testes E2E com Playwright e desenvolvimento em Golang.</li>
+                                <li class="highlight-bullet-item">Criação de cenários BDD e integração em ambientes Docker.</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Jest</span>
+                                <span class="tech-tag">Redux</span>
+                                <span class="tech-tag">Playwright</span>
+                                <span class="tech-tag">Golang</span>
+                                <span class="tech-tag">BDD</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ambev Tech -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header-meta">
+                                <span class="timeline-company">Ambev Tech</span>
+                                <span class="timeline-date">JUL 2021 — FEV 2023</span>
+                            </div>
+                            <div class="timeline-role">Analista de QA</div>
+                            <p class="timeline-text">
+                                Desenvolvimento de testes E2E e de APIs em ambientes Node.js com integração à nuvem Azure PaaS.
+                            </p>
+                            <ul class="highlight-bullets">
+                                <li class="highlight-bullet-item">Frameworks Cypress e Puppeteer em ecossistema JavaScript.</li>
+                                <li class="highlight-bullet-item">Execução de testes de mutação, usabilidade, integração e BDD.</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Cypress</span>
+                                <span class="tech-tag">Puppeteer</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Azure PaaS</span>
+                                <span class="tech-tag">API Testing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ericsson -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header-meta">
+                                <span class="timeline-company">Ericsson Inovação S.A.</span>
+                                <span class="timeline-date">JAN 2018 — JUL 2021</span>
+                            </div>
+                            <div class="timeline-role">Analista de Sistemas</div>
+                            <p class="timeline-text">
+                                Atuação multidisciplinar nos times de Suporte Operacional e Garantia de Qualidade.
+                            </p>
+                            <ul class="highlight-bullets">
+                                <li class="highlight-bullet-item">Desenvolvimento de scripts Python para automação de correções em massa em produção.</li>
+                                <li class="highlight-bullet-item">Automação de testes Selenium com BDD (Cucumber e Ruby).</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Selenium</span>
+                                <span class="tech-tag">Cucumber</span>
+                                <span class="tech-tag">Ruby</span>
+                                <span class="tech-tag">Multithreading</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Velsis -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header-meta">
+                                <span class="timeline-company">Velsis</span>
+                                <span class="timeline-date">ABR 2017 — JUN 2017</span>
+                            </div>
+                            <div class="timeline-role">Analista de Operações</div>
+                            <p class="timeline-text">
+                                Manutenção remota de equipamentos de captura e resolução de inconformidades em bancos de dados SQL, Java e Delphi.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Competencies Section -->
+        <section id="competencias" class="section">
+            <div class="container">
+                <div class="section-header reveal-on-scroll">
+                    <span class="section-badge">Habilidades</span>
+                    <h2 class="section-title">Matriz Tecnológica</h2>
+                    <p class="section-subtitle">Tecnologias, linguagens e ferramentas utilizadas no dia a dia.</p>
+                </div>
+
+                <div class="skills-grid reveal-on-scroll">
+                    
+                    <div class="skill-category-card">
+                        <h3 class="skill-category-title">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                            Automação de Testes
+                        </h3>
+                        <div class="skill-chips">
+                            <span class="skill-chip">Playwright</span>
+                            <span class="skill-chip">Cypress</span>
+                            <span class="skill-chip">Detox</span>
+                            <span class="skill-chip">Jest</span>
+                            <span class="skill-chip">Puppeteer</span>
+                            <span class="skill-chip">Selenium</span>
+                            <span class="skill-chip">Cucumber / BDD</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <h3 class="skill-category-title">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                            Linguagens de Programação
+                        </h3>
+                        <div class="skill-chips">
+                            <span class="skill-chip">JavaScript / TypeScript</span>
+                            <span class="skill-chip">Python</span>
+                            <span class="skill-chip">Golang</span>
+                            <span class="skill-chip">Dart</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <h3 class="skill-category-title">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                            Frontend & Mobile
+                        </h3>
+                        <div class="skill-chips">
+                            <span class="skill-chip">React</span>
+                            <span class="skill-chip">React Native</span>
+                            <span class="skill-chip">Flutter</span>
+                            <span class="skill-chip">Next.js</span>
+                            <span class="skill-chip">Redux</span>
+                            <span class="skill-chip">Expo</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <h3 class="skill-category-title">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2">
+                                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                <rect x="9" y="9" width="6" height="6"></rect>
+                                <line x1="9" y1="1" x2="9" y2="4"></line>
+                                <line x1="15" y1="1" x2="15" y2="4"></line>
+                            </svg>
+                            Backend & DevOps
+                        </h3>
+                        <div class="skill-chips">
+                            <span class="skill-chip">Golang (Gin)</span>
+                            <span class="skill-chip">Microsserviços</span>
+                            <span class="skill-chip">Docker</span>
+                            <span class="skill-chip">SQL</span>
+                            <span class="skill-chip">RabbitMQ</span>
+                            <span class="skill-chip">GitLab CI / GitHub Actions</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card" style="grid-column: span 2;">
+                        <h3 class="skill-category-title">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                            Ferramentas & Inteligência Artificial (GenAI)
+                        </h3>
+                        <div class="skill-chips">
+                            <span class="skill-chip">Model Context Protocol (MCP)</span>
+                            <span class="skill-chip">Engenharia de Contexto</span>
+                            <span class="skill-chip">Claude / Cursor / Copilot</span>
+                            <span class="skill-chip">Jira & X-Ray</span>
+                            <span class="skill-chip">Confluence & Zephyr</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications Section -->
+        <section id="formacao" class="section">
+            <div class="container">
+                <div class="section-header reveal-on-scroll">
+                    <span class="section-badge">Academia & Certificados</span>
+                    <h2 class="section-title">Formação Acadêmica e Certificações</h2>
+                    <p class="section-subtitle">Base educacional rigorosa e aperfeiçoamento contínuo em tecnologia.</p>
+                </div>
+
+                <div class="bento-grid">
+                    
+                    <div class="bento-card col-span-6 reveal-on-scroll">
+                        <h3 class="card-title">Formação Acadêmica</h3>
+                        <div style="display:flex; flex-direction:column; gap:1.25rem; margin-top:1rem;">
+                            <div>
+                                <div style="font-weight:700; color:var(--text-primary);">Instituto Federal da Bahia (IFBA)</div>
+                                <div style="font-size:0.9rem; color:var(--accent-primary);">Tecnólogo em Análise e Desenvolvimento de Sistemas</div>
+                                <div style="font-size:0.82rem; color:var(--text-muted);">2017 — 2026</div>
+                            </div>
+                            <div>
+                                <div style="font-weight:700; color:var(--text-primary);">Minds English School</div>
+                                <div style="font-size:0.9rem; color:var(--accent-primary);">Letras - Língua Inglesa e Literaturas</div>
+                                <div style="font-size:0.82rem; color:var(--text-muted);">2016 — 2018 (Proficiência Plena)</div>
+                            </div>
+                            <div>
+                                <div style="font-weight:700; color:var(--text-primary);">Instituto Federal da Bahia (IFBA)</div>
+                                <div style="font-size:0.9rem; color:var(--accent-primary);">Técnico em Mecânica</div>
+                                <div style="font-size:0.82rem; color:var(--text-muted);">2010 — 2014</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bento-card col-span-6 reveal-on-scroll">
+                        <h3 class="card-title">Certificações de Destaque</h3>
+                        <div class="cert-pub-grid" style="margin-top:1rem;">
+                            <div class="cert-pub-card">
+                                <div class="cert-pub-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="8" r="7"></circle>
+                                        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="cert-pub-title">Certified Tester Foundation Level (CTFL)</div>
+                            </div>
+
+                            <div class="cert-pub-card">
+                                <div class="cert-pub-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="8" r="7"></circle>
+                                        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="cert-pub-title">Imersão Inteligência Artificial na Prática</div>
+                            </div>
+
+                            <div class="cert-pub-card">
+                                <div class="cert-pub-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="8" r="7"></circle>
+                                        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="cert-pub-title">Jornada Python & cypress Test Automation</div>
+                            </div>
+
+                            <div class="cert-pub-card">
+                                <div class="cert-pub-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="8" r="7"></circle>
+                                        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="cert-pub-title">Introduction to Artificial Intelligence</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publicacoes" class="section">
+            <div class="container">
+                <div class="section-header reveal-on-scroll">
+                    <span class="section-badge">Pesquisa & Artigos</span>
+                    <h2 class="section-title">Publicações Técnicas</h2>
+                    <p class="section-subtitle">Contribuições acadêmicas e artigos publicados.</p>
+                </div>
+
+                <div class="bento-grid">
+                    
+                    <div class="bento-card col-span-6 reveal-on-scroll">
+                        <div class="card-header-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Análise da Utilização de Microgeração de Energia Eólica</h3>
+                        <p class="card-text">
+                            Estudo comparativo utilizando a Cidade do Porto como parâmetro de análise para aplicação na Cidade de Salvador.
+                        </p>
+                    </div>
+
+                    <div class="bento-card col-span-6 reveal-on-scroll">
+                        <div class="card-header-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Tô De Olho: Democratizando a Transparência do Senado Federal</h3>
+                        <p class="card-text">
+                            Projeto de transparência e análise de Dados Abertos governamentais aplicados à participação cidadã.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato" class="section">
+            <div class="container">
+                <div class="section-header reveal-on-scroll">
+                    <span class="section-badge">Canais Profissionais</span>
+                    <h2 class="section-title">Entre em Contato</h2>
+                    <p class="section-subtitle">Disponível para trocas técnicas, mentoria e oportunidades profissionais.</p>
+                </div>
+
+                <div class="contact-grid reveal-on-scroll">
+                    
+                    <a href="mailto:pedro.almei@hotmail.com" class="contact-card-item col-span-4">
+                        <div class="contact-icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="contact-details-title">E-mail</div>
+                            <div class="contact-details-val">pedro.almei@hotmail.com</div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.github.com/alzarus" target="_blank" rel="noopener noreferrer" class="contact-card-item col-span-4">
+                        <div class="contact-icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="contact-details-title">GitHub</div>
+                            <div class="contact-details-val">github.com/alzarus</div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/pedroalmei" target="_blank" rel="noopener noreferrer" class="contact-card-item col-span-4">
+                        <div class="contact-icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="contact-details-title">LinkedIn</div>
+                            <div class="contact-details-val">linkedin.com/in/pedroalmei</div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#hero" class="brand-logo" aria-label="Voltar ao início">
+                <div class="brand-icon">A</div>
+                <span>Alzarus</span>
+            </a>
+            <p class="footer-text">
+                Pedro Batista de Almeida Filho — Engenheiro de Software & QA Sênior. Salvador, Bahia, Brasil.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript Logic -->
+    <script src="resources/js/main.js"></script>
+</body>
 </html>
