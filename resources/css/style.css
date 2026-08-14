@@ -143,6 +143,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1.5rem;
   height: 4.5rem;
 }
 
@@ -551,6 +552,58 @@ button {
   height: 1rem;
 }
 
+/* Published Apps / Products Showcase */
+.app-card {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.app-card-icon {
+  flex-shrink: 0;
+  width: 6rem;
+  height: 6rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+}
+
+.app-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.app-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.app-card-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.app-card-heading .card-title {
+  margin-bottom: 0;
+}
+
+.app-card-store {
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  padding: 0.22rem 0.6rem;
+  border-radius: 9999px;
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
+  border: 1px solid var(--badge-border);
+}
+
 /* List of Highlights inside Cards */
 .highlight-bullets {
   list-style: none;
@@ -583,6 +636,12 @@ button {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 1.5rem;
+}
+
+/* Wider card for the last skill group. Must reset to a single track on mobile:
+   a leftover span would force an extra implicit column and clip the content. */
+.skill-category-card-wide {
+  grid-column: span 2;
 }
 
 .skill-category-card {
@@ -875,7 +934,9 @@ html, body {
   }
 }
 
-@media (max-width: 768px) {
+/* Navigation collapses earlier than the grid: the horizontal menu runs out
+   of room against the logo before the Bento layout needs to stack. */
+@media (max-width: 960px) {
   .mobile-menu-toggle {
     display: flex;
   }
@@ -918,7 +979,9 @@ html, body {
     width: 100%;
     padding: 0.4rem 0;
   }
+}
 
+@media (max-width: 768px) {
   .col-span-12, .col-span-8, .col-span-7, .col-span-6, .col-span-5, .col-span-4, .col-span-3 {
     grid-column: span 12 !important;
   }
@@ -930,6 +993,10 @@ html, body {
 
   .skills-grid, .cert-pub-grid {
     grid-template-columns: 1fr;
+  }
+
+  .skill-category-card-wide {
+    grid-column: auto;
   }
 
   .hero-section {
@@ -961,6 +1028,16 @@ html, body {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.25rem;
+  }
+
+  .app-card {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .app-card-icon {
+    width: 4.5rem;
+    height: 4.5rem;
   }
 
   .contact-card-item {
