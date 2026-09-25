@@ -34,7 +34,7 @@
                     <li><a href="#sobre" class="nav-link">Sobre</a></li>
                     <li><a href="#experiencia" class="nav-link">Experiência</a></li>
                     <li><a href="#competencias" class="nav-link">Competências</a></li>
-                    <li><a href="#produtos" class="nav-link">Produtos</a></li>
+                    <li><a href="#projetos" class="nav-link">Projetos</a></li>
                     <li><a href="#formacao" class="nav-link">Formação</a></li>
                     <li><a href="#publicacoes" class="nav-link">Publicações</a></li>
                     <li><a href="#contato" class="nav-link">Contato</a></li>
@@ -449,17 +449,155 @@
             </div>
         </section>
 
-        <!-- Products / Published Apps Section -->
-        <section id="produtos" class="section">
+        <!-- Projects & Products Section -->
+        <section id="projetos" class="section">
+            <span id="produtos" style="display:block; position:relative; top:-5rem; visibility:hidden;"></span>
             <div class="container">
                 <div class="section-header reveal-on-scroll">
-                    <span class="section-badge">Produtos Autorais</span>
-                    <h2 class="section-title">Aplicativos Publicados</h2>
-                    <p class="section-subtitle">Produtos próprios desenvolvidos e publicados em loja.</p>
+                    <span class="section-badge">Portfólio em Produção</span>
+                    <h2 class="section-title">Projetos & Aplicações em Produção</h2>
+                    <p class="section-subtitle">Sistemas distribuídos, plataformas analíticas e aplicações desenvolvidas e mantidas em ambiente de produção.</p>
                 </div>
 
                 <div class="bento-grid">
 
+                    <!-- Projeto 1: Tô De Olho -->
+                    <div class="bento-card col-span-12 app-card reveal-on-scroll">
+                        <div class="app-card-icon">
+                            <img src="resources/images/todeolho-icon.png" alt="Logotipo da plataforma Tô De Olho" width="96" height="96" loading="lazy" />
+                        </div>
+
+                        <div class="app-card-body">
+                            <div class="app-card-heading">
+                                <h3 class="card-title">Tô De Olho</h3>
+                                <span class="app-card-store">Web · Em Produção · TCC IFBA</span>
+                            </div>
+                            <p class="card-text">
+                                Plataforma web de transparência legislativa e auditoria cívica voltada ao acompanhamento contínuo da atuação do Senado Federal, desenvolvida como Trabalho de Conclusão de Curso (TCC) no Instituto Federal da Bahia (IFBA). O sistema processa dados abertos oficiais de proposições, votações nominais, participação em comissões temáticas, emendas parlamentares e despesas da cota parlamentar (CEAPS), consolidando um ranking ponderado de efetividade parlamentar e transparência fiscal.
+                            </p>
+                            <ul class="highlight-bullets">
+                                <li class="highlight-bullet-item">Pipeline concorrente de ingestão integrando rotinas de carga histórica (backfill) e sincronização contínua com a API Legislativa do Senado e Portal da Transparência.</li>
+                                <li class="highlight-bullet-item">Arquitetura de backend de alto desempenho em Go (Gin e GORM) com cache em Redis e persistência relacional em PostgreSQL 15.</li>
+                                <li class="highlight-bullet-item">Frontend desacoplado em Next.js 15 (App Router), TypeScript, Tailwind CSS, Shadcn/UI e visualizações analíticas em Recharts.</li>
+                                <li class="highlight-bullet-item">Infraestrutura em Docker Compose com túnel seguro Cloudflare Zero Trust e publicação contínua.</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Go (Gin)</span>
+                                <span class="tech-tag">PostgreSQL 15</span>
+                                <span class="tech-tag">Redis</span>
+                                <span class="tech-tag">Next.js 15</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">Docker Compose</span>
+                                <span class="tech-tag">Cloudflare Zero Trust</span>
+                            </div>
+                            <div class="app-card-actions">
+                                <a href="https://todeolho.org" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                    Acessar todeolho.org
+                                </a>
+                                <a href="https://ads.ifba.edu.br/item1259" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                    </svg>
+                                    Artigo do TCC (IFBA)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 2: Quem Votar -->
+                    <div class="bento-card col-span-12 app-card reveal-on-scroll">
+                        <div class="app-card-icon">
+                            <img src="resources/images/quemvotar-icon.png" alt="Logotipo da aplicação Quem Votar" width="96" height="96" loading="lazy" />
+                        </div>
+
+                        <div class="app-card-body">
+                            <div class="app-card-heading">
+                                <h3 class="card-title">Quem Votar</h3>
+                                <span class="app-card-store">Web & Multiplataforma · Em Produção</span>
+                            </div>
+                            <p class="card-text">
+                                Aplicação cívica multiplataforma integrada ao ecossistema Tô De Olho, projetada para viabilizar consulta pública, transparente e acessível a candidaturas, declarações de patrimônio e dados eleitorais oficiais do Tribunal Superior Eleitoral (TSE). A ferramenta permite busca parametrizada por cargo, unidade federativa e pleito eleitoral, filtros avançados por situação cadastral, partido e faixa patrimonial, consulta discriminada a bens e planos de governo, além de comparador lado a lado de até quatro candidaturas simultâneas sem juízo de valor ou destaque partidário.
+                            </p>
+                            <ul class="highlight-bullets">
+                                <li class="highlight-bullet-item">Interface reativa compilada para a Web via Flutter com arquitetura BLoC e camada de persistência/cache local com Drift (SQLite).</li>
+                                <li class="highlight-bullet-item">Serviço autônomo de dados em Node.js com SQLite próprio, executando ingestão programada a cada 24 horas dos 109 recortes eleitorais do DivulgaCandContas do TSE.</li>
+                                <li class="highlight-bullet-item">Desacoplamento arquitetural garantindo que a infraestrutura externa do TSE permaneça fora do caminho crítico das requisições do eleitor.</li>
+                                <li class="highlight-bullet-item">Servidor Nginx em máquina virtual dedicada (Contabo) com roteamento seguro e aceleração de cache de borda via Cloudflare.</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Flutter Web</span>
+                                <span class="tech-tag">Dart</span>
+                                <span class="tech-tag">BLoC</span>
+                                <span class="tech-tag">Drift (SQLite)</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">DivulgaCandContas TSE</span>
+                                <span class="tech-tag">Nginx</span>
+                                <span class="tech-tag">Cloudflare</span>
+                            </div>
+                            <div class="app-card-actions">
+                                <a href="https://todeolho.org/quemvotar/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                    Acessar todeolho.org/quemvotar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 3: NeuroAnálises -->
+                    <div class="bento-card col-span-12 app-card reveal-on-scroll">
+                        <div class="app-card-icon">
+                            <img src="resources/images/neuroanalises-icon.svg" alt="Logotipo da plataforma NeuroAnálises" width="96" height="96" loading="lazy" />
+                        </div>
+
+                        <div class="app-card-body">
+                            <div class="app-card-heading">
+                                <h3 class="card-title">NeuroAnálises</h3>
+                                <span class="app-card-store">Web & Telemetria · Em Produção</span>
+                            </div>
+                            <p class="card-text">
+                                Plataforma autônoma de telemetria contínua, persistência de alta performance e análise de séries temporais de plataformas de jogos online (modalidade Double). Voltada para auditoria analítica e modelagem probabilística, a aplicação monitora eventos em tempo real, calculando distribuições empíricas de frequência, sequências consecutivas (streaks), assimetrias estatísticas e atraso entre ocorrências raras, permitindo validação formal contra a distribuição teórica multinomial esperada.
+                            </p>
+                            <ul class="highlight-bullets">
+                                <li class="highlight-bullet-item">Motor de ingestão em alta cadência (7 segundos) com controle de retentativas exponenciais, tolerância a rate limits e compensação de jitter temporal.</li>
+                                <li class="highlight-bullet-item">Carga histórica retroativa (backfill idempotente) com desduplicação estrita por chave primária oficial da rodada.</li>
+                                <li class="highlight-bullet-item">Backend em TypeScript com Fastify e Better-SQLite3 em modo WAL, operando com consultas agregadas em menos de 50ms e consumo de memória inferior a 30 MB em produção.</li>
+                                <li class="highlight-bullet-item">Painel analítico em tempo real com auto-sync (3s), janelas temporais dinâmicas (1h a histórico completo) e exportação de dados em lote nos formatos JSON e CSV.</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Fastify</span>
+                                <span class="tech-tag">Better-SQLite3 (WAL)</span>
+                                <span class="tech-tag">Séries Temporais</span>
+                                <span class="tech-tag">Telemetria</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">VPS Linux</span>
+                            </div>
+                            <div class="app-card-actions">
+                                <a href="https://neurofluxis.com/neuroanalises" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                    Acessar neurofluxis.com/neuroanalises
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 4: MegaMoment -->
                     <div class="bento-card col-span-12 app-card reveal-on-scroll">
                         <div class="app-card-icon">
                             <img src="resources/images/megamoment-icon.png" alt="Ícone do aplicativo MegaMoment" width="96" height="96" loading="lazy" />
@@ -471,8 +609,13 @@
                                 <span class="app-card-store">Android · Google Play</span>
                             </div>
                             <p class="card-text">
-                                Aplicativo autoral desenvolvido em Flutter e publicado na Google Play. Gera jogos e sorteios a partir do instante exato em que são criados: loterias, Jogo do Bicho, sorteio de nomes e formação de times. Projeto conduzido de ponta a ponta — concepção, desenvolvimento, build assinado, publicação e manutenção na Play Console.
+                                Aplicativo autoral desenvolvido em Flutter e publicado na Google Play Store. Gera jogos e sorteios a partir do instante exato em que são criados: loterias, Jogo do Bicho, sorteio de nomes e formação de times. Projeto conduzido de ponta a ponta — concepção, desenvolvimento, build assinado, publicação e manutenção na Play Console.
                             </p>
+                            <ul class="highlight-bullets">
+                                <li class="highlight-bullet-item">Desenvolvimento mobile nativo com framework Flutter e linguagem Dart, aderindo às diretrizes de Material Design.</li>
+                                <li class="highlight-bullet-item">Integração de monetização com Google AdMob, em conformidade com as políticas de privacidade da Google Play e especificação app-ads.txt.</li>
+                                <li class="highlight-bullet-item">Esteira de empacotamento, assinatura criptográfica de APK/AAB e publicação completa no Google Play Console.</li>
+                            </ul>
                             <div class="tech-tags">
                                 <span class="tech-tag">Flutter</span>
                                 <span class="tech-tag">Dart</span>
@@ -481,12 +624,14 @@
                                 <span class="tech-tag">Google AdMob</span>
                                 <span class="tech-tag">Play Console</span>
                             </div>
-                            <a href="https://play.google.com/store/apps/details?id=com.megamoment.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                                </svg>
-                                Ver na Google Play
-                            </a>
+                            <div class="app-card-actions">
+                                <a href="https://play.google.com/store/apps/details?id=com.megamoment.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                    </svg>
+                                    Ver na Google Play
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -606,10 +751,17 @@
                                 <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
                             </svg>
                         </div>
-                        <h3 class="card-title">Tô De Olho: Democratizando a Transparência do Senado Federal</h3>
+                        <h3 class="card-title">Tô De Olho: Democratizando a Transparência do Senado Federal através de Dados Abertos</h3>
                         <p class="card-text">
-                            Projeto de transparência e análise de Dados Abertos governamentais aplicados à participação cidadã.
+                            Trabalho de Conclusão de Curso (TCC) aprovado no Instituto Federal da Bahia (IFBA), abordando a extração, auditoria e democratização de dados abertos legislativos para o controle social.
                         </p>
+                        <a href="https://ads.ifba.edu.br/item1259" target="_blank" rel="noopener noreferrer" class="card-link" style="margin-top:auto;">
+                            Acessar publicação no repositório IFBA
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </a>
                     </div>
 
                 </div>

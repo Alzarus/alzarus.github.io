@@ -18,6 +18,7 @@ yarn-error.log*
 .idea/
 *.sublime-project
 *.sublime-workspace
+.serena/
 
 # Build and Cache
 .cache/
