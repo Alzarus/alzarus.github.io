@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initMobileMenu();
   initScrollReveal();
+  initLanguagePreference();
 });
 
 /**
@@ -18,6 +19,7 @@ function initThemeToggle() {
 
   const sunIcon = document.getElementById('sun-icon');
   const moonIcon = document.getElementById('moon-icon');
+  const isEnglish = document.documentElement.lang && document.documentElement.lang.toLowerCase().startsWith('en');
 
   // Check stored theme or system preference
   const storedTheme = localStorage.getItem('theme');
@@ -37,14 +39,41 @@ function initThemeToggle() {
       document.documentElement.setAttribute('data-theme', 'dark');
       if (sunIcon) sunIcon.style.display = 'block';
       if (moonIcon) moonIcon.style.display = 'none';
-      themeToggleBtn.setAttribute('aria-label', 'Alternar para modo claro');
+      themeToggleBtn.setAttribute('aria-label', isEnglish ? 'Switch to light mode' : 'Alternar para modo claro');
     } else {
       document.documentElement.removeAttribute('data-theme');
       if (sunIcon) sunIcon.style.display = 'none';
       if (moonIcon) moonIcon.style.display = 'block';
-      themeToggleBtn.setAttribute('aria-label', 'Alternar para modo escuro');
+      themeToggleBtn.setAttribute('aria-label', isEnglish ? 'Switch to dark mode' : 'Alternar para modo escuro');
     }
   }
+}
+
+/**
+ * Persist language choice in localStorage when user toggles language
+ */
+function initLanguagePreference() {
+  const langButtons = document.querySelectorAll('.lang-btn');
+
+  // Ensure direct file navigation works smoothly when running locally via file://
+  if (window.location.protocol === 'file:') {
+    langButtons.forEach(btn => {
+      const href = btn.getAttribute('href');
+      if (href === 'en/' || href === './en/') {
+        btn.setAttribute('href', 'en/index.html');
+      } else if (href === '../' || href === './') {
+        btn.setAttribute('href', '../index.html');
+      }
+    });
+  }
+
+  langButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const text = btn.textContent.trim().toLowerCase();
+      const targetLang = text === 'en' ? 'en' : 'pt';
+      localStorage.setItem('preferred_lang', targetLang);
+    });
+  });
 }
 
 /**
